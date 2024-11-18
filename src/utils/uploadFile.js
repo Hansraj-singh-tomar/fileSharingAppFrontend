@@ -5,7 +5,7 @@ const uploadFile = (file, setUploadProgress, setUploadUrl) => {
     const formData = new FormData();
     formData.append("myfile", file);
 
-    axios.post("http://localhost:3000/api/files", formData, {
+    axios.post("https://file-sharing-backend-gules.vercel.app/api/files", formData, {
         headers: {
             "Content-Type": "multipart/form-data",
         },
