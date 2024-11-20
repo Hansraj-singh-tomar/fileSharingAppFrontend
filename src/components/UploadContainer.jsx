@@ -7,15 +7,20 @@ import uploadFile from "../utils/uploadFile";
 const UploadContainer = () => {
     const [uploadProgress, setUploadProgress] = useState(0);
     const [uploadUrl, setUploadUrl] = useState('');
+    const [loading, setLoading] = useState(null);
 
     const handleFileUpload = (file) => {
-        uploadFile(file, setUploadProgress, setUploadUrl);
+        uploadFile(file, setUploadProgress, setUploadUrl, setLoading);
     };
 
     return (
         <section className="flex-1 m-10 p-10 bg-white rounded-xl">
+
+            {loading && <h2 className="text-center font-semibold text-lg mb-2">Please wait...</h2>}
+
             {/* Handles the file upload form */}
             <FileUploadForm onFileUpload={handleFileUpload} />
+
 
             {/* Progress Container */}
             {

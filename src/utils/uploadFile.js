@@ -1,11 +1,11 @@
 // src/utils/uploadFile.js
 import axios from "axios";
 
-const uploadFile = (file, setUploadProgress, setUploadUrl) => {
+const uploadFile = (file, setUploadProgress, setUploadUrl, setLoading) => {
     const formData = new FormData();
     formData.append("myfile", file);
-
-    axios.post("https://file-sharing-backend-eight.vercel.app/api/files", formData, {
+    setLoading(true);
+    axios.post("http://localhost:3000/api/files", formData, {
         headers: {
             "Content-Type": "multipart/form-data",
         },
@@ -16,12 +16,14 @@ const uploadFile = (file, setUploadProgress, setUploadUrl) => {
     })
         .then((response) => {
             console.log("File uploaded successfully:", response);
-            setUploadUrl(response.data.file);
+            setLoading(false);
+            setUploadUrl(response.data.url);
             setUploadProgress(0); // Complete
         })
         .catch((error) => {
             console.error("Error uploading file:", error);
             setUploadProgress(0);
+            setLoading(false);
         });
 };
 

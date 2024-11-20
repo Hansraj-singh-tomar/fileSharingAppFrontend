@@ -27,7 +27,7 @@ const SharingContainer = ({ uploadUrl }) => {
             emailFrom: fromEmail,
         };
 
-        fetch("https://file-sharing-backend-eight.vercel.app/api/files/send", {
+        fetch("http://localhost:3000/api/files/send", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
