@@ -6,6 +6,7 @@ const uploadFile = (file, setUploadProgress, setUploadUrl, setLoading) => {
     formData.append("myfile", file);
     setLoading(true);
     axios.post("https://file-sharing-backend-khaki.vercel.app/api/files", formData, {
+        // axios.post("http://localhost:3000/api/files", formData, {
         headers: {
             "Content-Type": "multipart/form-data",
         },
