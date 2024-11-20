@@ -27,7 +27,7 @@ const SharingContainer = ({ uploadUrl }) => {
             emailFrom: fromEmail,
         };
 
-        fetch("http://localhost:3000/api/files/send", {
+        fetch("https://file-sharing-backend-khaki.vercel.app/api/files/send", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
