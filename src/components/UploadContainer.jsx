@@ -14,7 +14,7 @@ const UploadContainer = () => {
     };
 
     return (
-        <section className="flex-1 m-10 p-10 bg-white rounded-xl">
+        <section className="w-full my-10 p-5 md:flex-1 md:m-10 md:p-10 bg-white rounded-xl">
 
             {loading && <h2 className="text-center font-semibold text-lg mb-2">Please wait...</h2>}
 

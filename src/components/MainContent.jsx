@@ -3,7 +3,7 @@ import HeroImg from "./HeroImg";
 
 const MainContent = () => {
     return (
-        <section className="w-full flex justify-center items-center py-10 px-4">
+        <section className="w-full flex justify-center items-center md:py-10 px-1 md:px-4">
             {/* left side  */}
             <UploadContainer />
             {/* right side  */}

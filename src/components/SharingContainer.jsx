@@ -48,27 +48,27 @@ const SharingContainer = ({ uploadUrl }) => {
 
     return (
         <>
-            <div className="mt-4">
-                <p className="text-sm font-semibold text-gray-600 text-center">Link expired in 24 hours</p>
+            <div className="mt-8 md:mt-4">
+                <p className="text-lg md:text-sm font-semibold text-gray-600 text-center">Link expired in 24 hours</p>
 
                 <div className="flex justify-between items-center border-dashed border-indigo-400 border-2 rounded-lg p-3 mt-2 cursor-pointer">
                     <input type="text" ref={inputCopyRef} readOnly className="outline-none flex-1 text-sm p-2" />
                     <img onClick={handleCopyClick} src={copyIcon} width={20} alt="copy icon" className="transition-transform duration-300 hover:scale-125" />
                 </div>
 
-                <p className="text-sm font-semibold mt-4 text-center">Or Send via Email</p>
+                <p className="text-lg md:text-sm font-semibold mt-10 md:mt-4 text-center">Or Send via Email</p>
 
                 <div className="border-2 border-indigo-300 rounded-lg p-4 mt-4">
-                    <div className="flex justify-evenly items-end p-4">
-                        <label htmlFor="fromEmail" className="font-semibold">Your Email</label>
-                        <input name="from-email" onChange={(e) => setFromEmail(e.target.value)} type="text" required className="outline-none border-b-2 border-gray-400 px-2" />
+                    <div className="md:flex justify-evenly items-end p-2 md:p-4">
+                        <label htmlFor="fromEmail" className="font-semibold text-lg">Your Email</label>
+                        <input name="from-email" onChange={(e) => setFromEmail(e.target.value)} type="text" required className="outline-none text-xl border-b-2 border-gray-400 px-2 mt-3 md:mt-0" />
                     </div>
-                    <div className="flex justify-evenly items-end p-4">
-                        <label htmlFor="toEmail" className="font-semibold">Receiver Email</label>
-                        <input name="to-email" onChange={(e) => setToEmail(e.target.value)} type="text" required className="outline-none border-b-2 border-gray-400 px-2" />
+                    <div className="md:flex justify-evenly items-end mt-4 p-2 md:p-4">
+                        <label htmlFor="toEmail" className="font-semibold text-center text-lg">Receiver Email</label>
+                        <input name="to-email" onChange={(e) => setToEmail(e.target.value)} type="text" required className="outline-none text-xl border-b-2 border-gray-400 px-2 mt-3 md:mt-0" />
                     </div>
                     <div className="flex justify-center items-center mt-4">
-                        <button onClick={handleEmailChange} className="px-7 py-2 bg-indigo-600 text-white rounded-lg">Send</button>
+                        <button onClick={handleEmailChange} className="px-10 py-4 md:px-7 md:py-2 text-xl bg-indigo-600 text-white rounded-lg">Send</button>
                     </div>
                 </div>
             </div>

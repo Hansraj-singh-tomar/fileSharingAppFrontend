@@ -54,8 +54,8 @@ const FileUploadForm = ({ onFileUpload }) => {
             >
                 <img src={fileImg} width={200} alt="file image icon" className={`transition-transform duration-300 ${isDragging ? 'scale-110' : 'scale-100'}`} />
                 <input ref={fileInputRef} onChange={handleFileChange} type="file" hidden />
-                <h2 className="text-lg font-semibold">
-                    Drop your Files here or, <span onClick={handleBrowseClick} className="text-indigo-600 cursor-pointer hover:text-indigo-400">browse</span>
+                <h2 className="text-3xl md:text-lg font-semibold">
+                    Drop your Files here or, <span onClick={handleBrowseClick} className="text-indigo-600 cursor-pointer hover:text-indigo-400">Browse</span>
                 </h2>
             </div>
         </form>
