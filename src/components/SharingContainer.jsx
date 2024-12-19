@@ -58,10 +58,10 @@ const SharingContainer = ({ uploadUrl }) => {
 
                 <p className="text-lg md:text-sm font-semibold mt-10 md:mt-4 text-center">Or Send via Email</p>
 
-                <div className="border-2 border-indigo-300 rounded-lg p-4 mt-4">
+                <div className="border-2 border-indigo-300 rounded-lg p-4 mt-4 overflow-x-hidden">
                     <div className="md:flex justify-evenly items-end p-2 md:p-4">
                         <label htmlFor="fromEmail" className="font-semibold text-lg">Your Email</label>
-                        <input name="from-email" onChange={(e) => setFromEmail(e.target.value)} type="text" required className="outline-none text-xl border-b-2 border-gray-400 px-2 mt-3 md:mt-0" />
+                        <input name="from-email" onChange={(e) => setFromEmail(e.target.value)} type="text" required className="outline-none text-lg border-b-2 border-gray-400 px-2 mt-3 md:mt-0" />
                     </div>
                     <div className="md:flex justify-evenly items-end mt-4 p-2 md:p-4">
                         <label htmlFor="toEmail" className="font-semibold text-center text-lg">Receiver Email</label>
