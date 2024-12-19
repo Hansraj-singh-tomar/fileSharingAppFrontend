@@ -61,11 +61,11 @@ const SharingContainer = ({ uploadUrl }) => {
                 <div className="border-2 border-indigo-300 rounded-lg p-4 mt-4 overflow-x-hidden">
                     <div className="md:flex justify-evenly items-end p-2 md:p-4">
                         <label htmlFor="fromEmail" className="font-semibold text-lg">Your Email</label>
-                        <input name="from-email" onChange={(e) => setFromEmail(e.target.value)} type="text" required className="outline-none text-lg border-b-2 border-gray-400 px-2 mt-3 md:mt-0" />
+                        <input name="from-email" onChange={(e) => setFromEmail(e.target.value)} type="text" required className="w-full md:w-1/2 outline-none text-xl border-b-2 border-gray-400 mt-3 md:mt-0" />
                     </div>
                     <div className="md:flex justify-evenly items-end mt-4 p-2 md:p-4">
                         <label htmlFor="toEmail" className="font-semibold text-center text-lg">Receiver Email</label>
-                        <input name="to-email" onChange={(e) => setToEmail(e.target.value)} type="text" required className="outline-none text-xl border-b-2 border-gray-400 px-2 mt-3 md:mt-0" />
+                        <input name="to-email" onChange={(e) => setToEmail(e.target.value)} type="text" required className="w-full md:w-1/2 outline-none text-xl border-b-2 border-gray-400 mt-3 md:mt-0" />
                     </div>
                     <div className="flex justify-center items-center mt-4">
                         <button onClick={handleEmailChange} className="px-10 py-4 md:px-7 md:py-2 text-xl bg-indigo-600 text-white rounded-lg">Send</button>
